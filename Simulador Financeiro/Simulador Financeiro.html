@@ -23,17 +23,23 @@
                 </div>
                 <div class="input">
                     <label for="in_tempo">Quanto tempo o vinho ficará armazenado?</label>
-                    <input type="number" id="in_tempo" placeholder="Digite a quantidade em meses">
+                    <input type="number" id="in_tempo" placeholder="Digite a quantidade em Anos">
                 </div>
                 <div class="input">
                     <label for="in_tipo">Qual o tipo do vinho a ser armazenado?</label>
                     <input type="text" id="in_tipo" placeholder="Digite o tipo do vinho">
                 </div>
                 <div>
-                    <button class="butao" onclick="calculo()">Calcular possível lucro</button>
+                    <label for="in_tempo">Qual o valor médio do seu vinho?</label>
+                    <input type="number" id="in_valor" placeholder="Digite o valor médio do seu vinho">
+                </div>
+
+                <div>
+                    <button class="butao" type="button" onclick="calculo()">Calcular possível lucro</button>
                 </div>
             </form>
 
+            <div id="div_mensagem"></div>
         </div>
     </div>
 
@@ -42,5 +48,32 @@
 </html>
 
 <script>
+
+    function calculo(){
+        
+        div_mensagem.innerHTML = ''
+
+        var tempo = Number(in_tempo.value)
+        var tipo = in_tipo.value
+        var quantidade = Number(in_quantidade.value)
+        var valor = Number(in_valor.value)
+        var media = (quantidade + tempo) / 2 * valor
+
+       div_mensagem.innerHTML = 'Você irá pagar R$ 500,00 por nossa solução de controle de temperatura e umidade.<br>'
+        
+        
+       if (tipo == 'Tinto') {
+        div_mensagem.innerHTML += `<br>O seu vinho do tipo tinto irá se valorizar em 5% ao ano ao final de ${tempo} ano(s) você terá o lucro de R$ ${(media) * 0.05} Totalizando R$ ${((media) * 0.05) + (media)}.`
+       }
+
+       if (tipo == 'Suave') {
+        div_mensagem.innerHTML += `<br>O seu vinho do tipo Suave irá se valorizar em 7% ao ano. Ao final de ${tempo} ano(s) você terá o lucro de R$ ${(media) * 0.07} Totalizando R$ ${((media) * 0.07) + (media)}.`
+       }
+
+       if (tipo == 'Rosé') {
+        div_mensagem.innerHTML += `<br>O seu vinho do tipo Rosé irá se valorizar em 6% ao ano. Ao final de ${tempo} ano(s) você terá o lucro de R$ ${(media) * 0.06} Totalizando R$ ${((media) * 0.06) + (media)}.`
+       }
+
+    }
 
 </script>

@@ -28,11 +28,11 @@
 
 .content {
     height: auto;
-    width: 40%;
+    width: 30%;
     /* background-color: red; */
     color: white;
     /* Margem interna */
-    margin-top: 32px;
+    margin-top: 64px;
     padding: 16px;
     position: relative;
     /* Sobrepondo tudo que está abaixo do 10 */

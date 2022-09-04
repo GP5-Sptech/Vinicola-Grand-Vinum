@@ -2,7 +2,6 @@ USE sprint1;
 
 CREATE TABLE Arduino(
 idCliente INT PRIMARY KEY AUTO_INCREMENT,
-NomeEmpresa VARCHAR (60),
 Temperatura_Cº DECIMAL(4,2),
 Umidade CHAR(7),
 DataHora DATETIME

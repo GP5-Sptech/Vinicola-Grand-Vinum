@@ -62,5 +62,10 @@ SELECT idCliente, NomeEmpresa, CNPJ, CEP, tipoVinho, Quantidade FROM CadastroCli
 SELECT NomeEmpresa, Email_Login, Senha FROM CadastroCliente WHERE idCliente= 3;
 
 SELECT idCliente, NomeEmpresa, Logradouro, Numero, Bairro, Complemento, Cidade, CEP FROM CadastroCliente WHERE idCliente =3;
-SELECT idCliente, NomeEmpresa, Logradouro, Numero, Bairro, Complemento, Cidade, CEP FROM CadastroCliente WHERE NomeEmpresa LIKE '%b%';
+SELECT idCliente, NomeEmpresa, Logradouro, Numero, Bairro, Complemento, Cidade, CEP FROM CadastroCliente WHERE NomeEmpresa LIKE '%b';
+
+INSERT INTO CadastroCliente (NomeEmpresa, CNPJ,Email_Login, Senha, Logradouro, Numero, Bairro, Complemento, Cidade, CEP, tipoVinho, Quantidade) VALUES 
+('FazSentidoVinhos', '21.605.139/0001-50','danvinhos@makeanysense.com','papai123','Rua Rio de Janeiro', 123, 'FazAlgumsentido', 'Sala 08', 'Rio de Janeiro','03920-005','Rosé', 334);
+
+
 

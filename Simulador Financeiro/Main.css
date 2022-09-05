@@ -18,7 +18,9 @@
     background-repeat: no-repeat;
     /* Cobrir a tela inteira */
     background-size: cover;
+    /* Blur na imagem */
     filter: blur(3px);
+    /*  */
     position: absolute;
     top: 0%;
     bottom: 0%;
@@ -56,21 +58,26 @@ input{
     /* Colocando o máximo que o label e o input pode oferecer dentro do content */
     width: -webkit-fill-available;
     padding: 8px 16px;
+    /* Borda arredondada do input */
     border-radius: 12px;
+    /* Tirar a borda do input */
     border: unset;
     background-color: rgb(245, 239, 239);
 }
 
 input:focus-visible, input:active{
     background-color: white;
+    /* Tirar a borda que aparece ao clicar no input */
     outline: unset;
 }
 
 input::placeholder{
+    /* Texto dentro do input que aparece antes de alguma escrita */
     opacity: 70%;
 }
 
 input:hover{
+    /* Ao passar o mouse em cima, a cor do hover predomina */
     background-color: white;
 }
 

@@ -23,7 +23,7 @@
                 </div>
                 <div class="input">
                     <label for="in_tempo">Quanto tempo o vinho ficará armazenado?</label>
-                    <input type="number" id="in_tempo" placeholder="Digite a quantidade em Anos">
+                    <input type="number" id="in_tempo" placeholder="Digite a quantidade em anos">
                 </div>
                 <div class="input">
                     <label for="in_tipo">Qual o tipo do vinho a ser armazenado?</label>
@@ -51,20 +51,18 @@
 
     function calculo() {
 
-        div_mensagem.innerHTML = ''
-
         var tempo = Number(in_tempo.value)
         var tipo = in_tipo.value
         var quantidade = Number(in_quantidade.value)
         var valor = Number(in_valor.value)
-        var media = ((quantidade + tempo) / 2) * valor
-        var mediaLucro = (media) * 0.06
-        var lucro = (mediaLucro) + (media)
+        var capital = valor * quantidade
+        var conta = capital * (1 + 0.06)** tempo
+        var lucro = conta - capital - 2000
 
 
-        div_mensagem.innerHTML = 'Você irá pagar R$ 500,00 por nossa solução de controle de temperatura e umidade.<br>'
+        div_mensagem.innerHTML = 'Você irá pagar R$ 2000,00 por nossa solução de controle de temperatura e umidade.<br>'
 
-        div_mensagem.innerHTML += `<br>O seu vinho do tipo ${tipo} irá se valorizar em media 6% ao ano. Ao final de ${tempo} ano(s) você terá o lucro de R$ ${mediaLucro} Totalizando, em média, R$ ${lucro}.`
+        div_mensagem.innerHTML += `<br>O seu vinho do tipo ${tipo} irá se valorizar em media 6% ao ano. Ao final de ${tempo} ano(s) você terá o lucro de R$ ${(conta).toFixed(2)} Totalizando, em média, R$ ${(lucro).toFixed(2)}.`
     }
     
 </script>

@@ -21,7 +21,10 @@ CREATE TABLE CadastroCliente (
 INSERT INTO CadastroCliente (NomeEmpresa, CNPJ,Email_Login, Senha, Logradouro, Numero, Bairro, Complemento, Cidade, CEP, tipoVinho, Quantidade) VALUES
 ('Vivivinhos', '20.645.889/0001-30','vivivinhos@createemail.com','altertable123','Rua Dados', 595, 'Database', 'Sala 11', 'São Paulo','09420-905','Tinto', 280),
 ('Adegas Yoshi', '33.429.728/0002-40','adegayoshi@uia.tome','input#in_senha','Rua Algoritmos', 999, 'Tome', 'sala 05', 'São Paulo','02014-222','Rosé', 200),
-('Chola`s Cyber Winery', '11.000.101/1001-11','Winery@binary.tsmc','SenhaEmBinario','Rua Turing', 0101, 'Neuman', null , 'São Paulo','01111-000','Branco', 130);
+('Chola`s Cyber Winery', '11.000.101/1001-11','Winery@binary.tsmc','SenhaEmBinario','Rua Turing', 0101, 'Neuman', null , 'São Paulo','01111-000','Branco', 130),
+('FazSentidoVinhos', '21.605.139/0001-50','danvinhos@makeanysense.com','papai123','Rua Rio de Janeiro', 123, 'FazAlgumsentido', 'Sala 08', 'Rio de Janeiro','03920-005','Rosé', 334),
+('VinhosDaCaramico', '25.501.328/0001-20', 'vinhoscaramico@stylee.com', 'love', '321','bilíngue', null , 'São Paulo', '08411-340', 'Branco', '320');
+
 
 truncate CadastroCliente;
 
@@ -64,10 +67,6 @@ SELECT NomeEmpresa, Email_Login, Senha FROM CadastroCliente WHERE idCliente= 3;
 SELECT idCliente, NomeEmpresa, Logradouro, Numero, Bairro, Complemento, Cidade, CEP FROM CadastroCliente WHERE idCliente =3;
 SELECT idCliente, NomeEmpresa, Logradouro, Numero, Bairro, Complemento, Cidade, CEP FROM CadastroCliente WHERE NomeEmpresa LIKE '%b';
 
-INSERT INTO CadastroCliente (NomeEmpresa, CNPJ,Email_Login, Senha, Logradouro, Numero, Bairro, Complemento, Cidade, CEP, tipoVinho, Quantidade) VALUES 
-('FazSentidoVinhos', '21.605.139/0001-50','danvinhos@makeanysense.com','papai123','Rua Rio de Janeiro', 123, 'FazAlgumsentido', 'Sala 08', 'Rio de Janeiro','03920-005','Rosé', 334);
 
-INSERT INTO CadastroCliente (NomeEmpresa, CNPJ, Email_Login, Senha, Logradouro, Numero, Bairro, Complemento, Cidade, CEP, tipoVinho, Quantidade) VALUES
-('VinhosDaCaramico', '25.501.328/0001-20', 'vinhoscaramico@stylee.com', 'love', '321','bilíngue', null , 'São Paulo', '08411-340', 'Branco', '320');
 
 

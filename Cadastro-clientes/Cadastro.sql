@@ -24,7 +24,7 @@ INSERT INTO CadastroCliente (NomeEmpresa, CNPJ, Celular_telefone, Email_Login, S
 ('Adegas Yoshi', '33.429.728/0002-40', '(011) 98765-3131','adegayoshi@uia.tome','input#in_senha','Rua Algoritmos', 999, 'Tome', 'sala 05', 'São Paulo','02014-222','Rosé', 200),
 ('Chola`s Cyber Winery', '11.000.101/1001-11','(011) 1111-1001','Winery@binary.tsmc','SenhaEmBinario','Rua Turing', 0101, 'Neuman', null , 'São Paulo','01111-000','Branco', 130),
 ('FazSentidoVinhos', '21.605.139/0001-50', '(011) 98231-3999','danvinhos@makeanysense.com','papai123','Rua Rio de Janeiro', 123, 'FazAlgumsentido', 'Sala 08', 'Rio de Janeiro','03920-005','Rosé', 334),
-('VinhosDaCaramico', '25.501.328/0001-20', '(011) 95211-0093', 'vinhoscaramico@stylee.com', 'love', '321','bilíngue', null , 'São Paulo', '08411-340', 'Branco', '320');
+('VinhosDaCaramico', '25.501.328/0001-20', '(011) 95211-0093', 'vinhoscaramico@stylee.com', 'love', 'Avenida Grungee','321','bilingue', null , 'São Paulo', '08411-340', 'Tinto', '320');
 
 
 
@@ -67,5 +67,5 @@ SELECT idCliente, NomeEmpresa, Celular_telefone, Logradouro, Numero, Bairro, Com
 SELECT idCliente, NomeEmpresa, Celular_telefone, Logradouro, Numero, Bairro, Complemento, Cidade, CEP FROM CadastroCliente WHERE NomeEmpresa LIKE '%b';
 
 
-
+DROP TABLE CadastroCliente;
 

@@ -20,9 +20,9 @@ SELECT * FROM Arduino WHERE idCliente = 2;
 SELECT * FROM Arduino WHERE idCliente = 3;
 
 
-SELECT Temperatura_C, Umidade, DataHora FROM Arduino WHERE idCliente = 1;
-SELECT Temperatura_C, Umidade, DataHora FROM Arduino WHERE idCliente = 2;
-SELECT Temperatura_C, Umidade, DataHora FROM Arduino WHERE idCliente = 3;
+SELECT Temperatura_Cº Umidade, DataHora FROM Arduino WHERE idCliente = 1;
+SELECT Temperatura_Cº, Umidade, DataHora FROM Arduino WHERE idCliente = 2;
+SELECT Temperatura_Cº, Umidade, DataHora FROM Arduino WHERE idCliente = 3;
 
 
 

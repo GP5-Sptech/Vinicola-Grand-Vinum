@@ -52,7 +52,7 @@
     function calculo() {
 
         div_mensagem.innerHTML = ''
-        
+
         var tempo = Number(in_tempo.value)
         var tipo = in_tipo.value
         var quantidade = Number(in_quantidade.value)
@@ -63,43 +63,43 @@
 
 
         var capital = valor * quantidade
-        var conta = capital * (1 + 0.06)** tempo
+        var conta = capital * (1 + 0.06) ** tempo
         var receita = conta - capital
 
-/* Se algum campo estiver vazio o simulador irá mostrar um alerta e não irá mostrar nenhuma mensagem na tela. */
+        /* Se algum campo estiver vazio o simulador irá mostrar um alerta e não irá mostrar nenhuma mensagem na tela. */
 
-        if (quantidade == ''){
-            alert ('Por favor, informe a quantidade de vinhos que você tem armazenado!')
+        if (quantidade == '') {
+            alert('Por favor, informe a quantidade de vinhos que você tem armazenado!')
         }
 
-            else{
+        else {
 
-        if (tempo == ''){
-                alert ('Por favor, informe o tempo que você pretende deixar armazenado!')
+            if (tempo == '') {
+                alert('Por favor, informe o tempo que você pretende deixar armazenado!')
             }
 
-            else{
+            else {
 
-        if (tipo == ''){
-                alert ('Por favor, informe o tipo do vinho que você pretende deixar armazenado!')
-            }
+                if (tipo == '') {
+                    alert('Por favor, informe o tipo do vinho que você pretende deixar armazenado!')
+                }
 
-            else{
+                else {
 
-        if (valor == ''){
-                alert ('Por favor, informe o valor médio que você vende seus vinhos!')
-            }
+                    if (valor == '') {
+                        alert('Por favor, informe o valor médio que você vende seus vinhos!')
+                    }
 
-            else{
-                
-/* Se todos os campos estiverem ok, o simulador irá mostrar a mensagem normalmente... */
+                    else {
 
-         div_mensagem.innerHTML += `<br>O seu vinho do tipo ${tipo} irá se valorizar no mínimo 6% ao ano. Ao final de ${tempo} ano(s) o seu vinho irá se valorizar em media R$ ${(conta).toFixed(2)} Totalizando, em média, R$ ${(receita).toFixed(2)}.`
+                        /* Se todos os campos estiverem ok, o simulador irá mostrar a mensagem normalmente... */
 
+                        div_mensagem.innerHTML += `<br>O seu vinho do tipo ${tipo} irá se valorizar no mínimo 6% ao ano. Ao final de ${tempo} ano(s) o seu vinho irá se valorizar em media R$ ${(conta).toFixed(2)} Totalizando, em média, R$ ${(receita).toFixed(2)}.`
+
+                    }
+                }
             }
-            }
-            }
-            }
+        }
     }
-    
+
 </script>

@@ -13,7 +13,7 @@
 
 .background__image {
     /* Colocar a imagem */
-    background-image: url('Sigma.jpg');
+    background-image: url('Background.jpg');
     /* Deixar sem repetição de imagem */
     background-repeat: no-repeat;
     /* Cobrir a tela inteira */

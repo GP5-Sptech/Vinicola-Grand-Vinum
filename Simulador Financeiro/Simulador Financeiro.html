@@ -59,12 +59,12 @@
         var valor = Number(in_valor.value)
 
         /* Conta para calcular possível lucro: Montante = Capital * (1 + I)^tempo.
-        Em que o capital é o valor total de vinho que o cliente tem armazenado, o tempo é os anos que o vinho ficará armazenado, e o montante é o total de lucro após o tempo definido. */
+        Em que o capital é o valor total de vinho que o cliente tem armazenado, o tempo é os anos que o vinho ficará armazenado, e o montante é o total de receita após o tempo definido. */
 
 
         var capital = valor * quantidade
         var conta = capital * (1 + 0.06)** tempo
-        var lucro = conta - capital - 2000
+        var receita = conta - capital
 
 /* Se algum campo estiver vazio o simulador irá mostrar um alerta e não irá mostrar nenhuma mensagem na tela. */
 
@@ -94,9 +94,7 @@
                 
 /* Se todos os campos estiverem ok, o simulador irá mostrar a mensagem normalmente... */
 
-         div_mensagem.innerHTML = 'Você irá pagar R$ 2000,00 por nossa solução de controle de temperatura e umidade.<br>'
-
-         div_mensagem.innerHTML += `<br>O seu vinho do tipo ${tipo} irá se valorizar em media 6% ao ano. Ao final de ${tempo} ano(s) você terá o lucro de R$ ${(conta).toFixed(2)} Totalizando, em média, R$ ${(lucro).toFixed(2)}.`
+         div_mensagem.innerHTML += `<br>O seu vinho do tipo ${tipo} irá se valorizar no mínimo 6% ao ano. Ao final de ${tempo} ano(s) o seu vinho irá se valorizar em media R$ ${(conta).toFixed(2)} Totalizando, em média, R$ ${(receita).toFixed(2)}.`
 
             }
             }

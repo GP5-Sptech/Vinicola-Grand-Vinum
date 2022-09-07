@@ -13,20 +13,13 @@ INSERT INTO Arduino (Temperatura_Cº, Umidade, DataHora) VALUES
 (12.8, '71,2%', '2022-09-08 10:52:14'),
 (14.0, '60%','2022-03-10 13:30:01');
 
-
 SELECT * FROM Arduino;
 SELECT * FROM Arduino WHERE idCliente = 1;
 SELECT * FROM Arduino WHERE idCliente = 2;
 SELECT * FROM Arduino WHERE idCliente = 3;
 
-
 SELECT Temperatura_Cº Umidade, DataHora FROM Arduino WHERE idCliente = 1;
 SELECT Temperatura_Cº, Umidade, DataHora FROM Arduino WHERE idCliente = 2;
 SELECT Temperatura_Cº, Umidade, DataHora FROM Arduino WHERE idCliente = 3;
 
-
-
-
 DROP TABLE Arduino;
-
-

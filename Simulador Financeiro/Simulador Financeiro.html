@@ -18,6 +18,7 @@
             <h1>Solução Grand Vinum</h1>
             <form>
                 <div class="input">
+                    <!-- <label> representa uma legenda para um item em uma interface de usuário -->
                     <label for="in_quantidade">Qual a quantidade de vinho a ser armazenado?</label>
                     <input type="number" id="in_quantidade" placeholder="Digite a quantidade em litros">
                 </div>
@@ -42,13 +43,11 @@
             <div class="mensagem" id="div_mensagem"></div>
         </div>
     </div>
-
 </body>
 
 </html>
 
 <script>
-
     function calculo() {
 
         div_mensagem.innerHTML = ''
@@ -60,7 +59,6 @@
 
         /* Conta para calcular possível lucro: Montante = Capital * (1 + I)^tempo.
         Em que o capital é o valor total de vinho que o cliente tem armazenado, o tempo é os anos que o vinho ficará armazenado, e o montante é o total de receita após o tempo definido. */
-
 
         var capital = valor * quantidade
         var conta = capital * (1 + 0.06) ** tempo
@@ -101,5 +99,4 @@
             }
         }
     }
-
 </script>
